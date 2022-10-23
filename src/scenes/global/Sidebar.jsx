@@ -90,7 +90,13 @@ const Sidebar = () => {
           </MenuItem>
 
           {!isCollapsed && (
-            <Box mb="25px" pl="20px">
+            <Box
+              mb="25px"
+              pl="20px"
+              display="flex"
+              alignItems="center"
+              gap="12px"
+            >
               <Box
                 display="flex"
                 justifyContent="flex-start"
@@ -98,22 +104,36 @@ const Sidebar = () => {
               >
                 <img
                   alt="profile-user"
-                  width="100px"
-                  height="100px"
+                  width="54px"
+                  height="54px"
                   src={`../../assets/user.jpg`}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
               <Box textAlign="left">
                 <Typography
-                  variant="h4"
+                  variant="h6"
                   color={colors.grey[100]}
                   fontWeight="bold"
-                  sx={{ m: "10px 0 0 0" }}
+                  sx={{
+                    width: "150px",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
                 >
                   Blake Zajac
                 </Typography>
-                <Typography variant="h6" color={colors.greenAccent[500]}>
+                <Typography
+                  variant="h6"
+                  color={colors.greenAccent[500]}
+                  sx={{
+                    width: "150px",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
+                >
                   Product Designer
                 </Typography>
               </Box>
